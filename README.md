@@ -1,5 +1,7 @@
 # blog-platform
+
 # Group Informations
+
 student1:H.V.S.Gimasha-ITBIN-2313-0035
 Role:Devops Engineer
 Student2:D.R.A.I.Kumari Dassanayaka-ITBIN-2313-0035
@@ -8,6 +10,7 @@ Student3:P.D.S.Hirunika kavindi-ITBIN-2313-0049
 Role:Backend Developer
 
 # Description
+
 Our Blog Platform is a modern, user-friendly application designed for creating, managing, and sharing articles with ease. It offers a clean interface and powerful features for both writers and readers, making content management simple and engaging.
 
 Key Features
@@ -18,10 +21,14 @@ Comment & Like System – Encourage interaction and community engagement.
 Tag & Category Management – Organize posts for better navigation and discovery.
 Admin Dashboard – Manage users, posts, and site settings efficiently.
 Responsive Design – Fully optimized for mobile, tablet, and desktop devices.
+
 # Live Deployment
+
 Live URL: https://github.com/Zithvi/blog-platform.git
+
 # Technologies Used
- Frontend
+
+Frontend
 HTML5 – Structure of the web pages
 CSS3 – Styling and responsive design
 JavaScript (ES6) – Client-side interactivity
@@ -29,7 +36,9 @@ Bootstrap – Responsive UI components
 Backend
 Node.js – Server-side runtime environment
 Express.js – Backend framework for handling routes and APIs
+
 # features
+
 Application Features
 User Authentication
 Secure registration and login system for job seekers and employers.
@@ -58,7 +67,9 @@ main
 Contains the stable and production-ready version of the project.
 develop
 Integration branch where all completed features are merged before moving to main.
+
 # Individual contributions
+
 H.V.S.Gimash– DevOps Engineer
 Managed version control using Git & GitHub
 Designed and maintained CI/CD pipeline
@@ -89,13 +100,14 @@ Node.js (v16 or higher)
 npm or yarn
 Git
 MySQL / MongoDB (depending on your database)
+
 1. Clone the Repository
-git clone https://github.com/Zithvi/blog-platform.git
-cd job-platform
+   git clone https://github.com/Zithvi/blog-platform.git
+   cd job-platform
 2. Install Dependencies
-Backend
-cd backend
-npm install
-Frontend
-cd frontend
-npm install
+   Backend
+   cd backend
+   npm install
+   Frontend
+   cd frontend
+   npm install

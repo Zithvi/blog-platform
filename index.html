@@ -1,551 +1,679 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JobAlert - Internship & Job Portal for Students</title>
-    <link rel="stylesheet" href="styles/style.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
     <!-- Header / Navigation -->
     <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo" onclick="showPage('home')">
-                    <div class="logo-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <span class="logo-text">JobAlert</span>
-                </div>
+      <div class="container">
+        <nav class="nav">
+          <div class="logo" onclick="showPage('home')">
+            <div class="logo-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <span class="logo-text">JobAlert</span>
+          </div>
 
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#" onclick="showPage('home')" class="nav-link active" data-page="home">Home</a></li>
-                    <li><a href="#" onclick="showPage('jobs')" class="nav-link" data-page="jobs">Browse Jobs</a></li>
-                    <li><a href="#" onclick="showPage('dashboard')" class="nav-link" data-page="dashboard">Dashboard</a></li>
-                </ul>
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a
+                href="#"
+                onclick="showPage('home')"
+                class="nav-link active"
+                data-page="home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="showPage('jobs')"
+                class="nav-link"
+                data-page="jobs"
+                >Browse Jobs</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="showPage('dashboard')"
+                class="nav-link"
+                data-page="dashboard"
+                >Dashboard</a
+              >
+            </li>
+          </ul>
 
-                <div class="nav-actions">
-                    <button class="notification-btn">
-                        <i class="fas fa-bell"></i>
-                        <span class="notification-badge"></span>
-                    </button>
-                    <button class="btn btn-primary" onclick="showPage('login')">
-                        <i class="fas fa-user"></i>
-                        Login
-                    </button>
-                </div>
+          <div class="nav-actions">
+            <button class="notification-btn">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge"></span>
+            </button>
+            <button class="btn btn-primary" onclick="showPage('login')">
+              <i class="fas fa-user"></i>
+              Login
+            </button>
+          </div>
 
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <!-- Home Page -->
     <div id="homePage" class="page active">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">
-                            Find Your Dream
-                            <span class="text-primary">Internship & Job</span>
-                        </h1>
-                        <p class="hero-description">
-                            Get real-time alerts for internships and jobs tailored to your skills. Never miss an opportunity again!
-                        </p>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                Find Your Dream
+                <span class="text-primary">Internship & Job</span>
+              </h1>
+              <p class="hero-description">
+                Get real-time alerts for internships and jobs tailored to your
+                skills. Never miss an opportunity again!
+              </p>
 
-                        <!-- Search Bar -->
-                        <div class="search-box">
-                            <div class="search-input-group">
-                                <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Job title or keyword">
-                            </div>
-                            <div class="search-input-group">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <input type="text" placeholder="Location">
-                            </div>
-                            <button class="btn btn-primary" onclick="showPage('jobs')">Search</button>
-                        </div>
-
-                        <!-- Stats -->
-                        <div class="stats">
-                            <div class="stat-item">
-                                <div class="stat-value">500+</div>
-                                <div class="stat-label">Active Jobs</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">200+</div>
-                                <div class="stat-label">Companies</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-value">10k+</div>
-                                <div class="stat-label">Students</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1701576766277-c6160505581d?w=800" alt="Students studying">
-                    </div>
+              <!-- Search Bar -->
+              <div class="search-box">
+                <div class="search-input-group">
+                  <i class="fas fa-search"></i>
+                  <input type="text" placeholder="Job title or keyword" />
                 </div>
+                <div class="search-input-group">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <input type="text" placeholder="Location" />
+                </div>
+                <button class="btn btn-primary" onclick="showPage('jobs')">
+                  Search
+                </button>
+              </div>
+
+              <!-- Stats -->
+              <div class="stats">
+                <div class="stat-item">
+                  <div class="stat-value">500+</div>
+                  <div class="stat-label">Active Jobs</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">200+</div>
+                  <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">10k+</div>
+                  <div class="stat-label">Students</div>
+                </div>
+              </div>
             </div>
-            <div class="hero-decoration hero-decoration-1"></div>
-            <div class="hero-decoration hero-decoration-2"></div>
-        </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Why Choose JobAlert?</h2>
-                    <p class="section-description">
-                        Discover how our platform helps thousands of students find their dream opportunities
-                    </p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon bg-blue">
-                            <i class="fas fa-bell"></i>
-                        </div>
-                        <h3 class="feature-title">Real-time Alerts</h3>
-                        <p class="feature-description">Get instant notifications when new opportunities match your profile</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon bg-green">
-                            <i class="fas fa-filter"></i>
-                        </div>
-                        <h3 class="feature-title">Smart Filtering</h3>
-                        <p class="feature-description">Filter jobs by skills, location, type, and more to find perfect matches</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon bg-purple">
-                            <i class="fas fa-bookmark"></i>
-                        </div>
-                        <h3 class="feature-title">Save Opportunities</h3>
-                        <p class="feature-description">Bookmark interesting jobs and internships for later review</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon bg-orange">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="feature-title">Career Growth</h3>
-                        <p class="feature-description">Track your applications and improve your career prospects</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon bg-pink">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3 class="feature-title">Email Updates</h3>
-                        <p class="feature-description">Receive daily or weekly email digests of new opportunities</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon bg-indigo">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3 class="feature-title">Never Miss Out</h3>
-                        <p class="feature-description">Stay updated with deadlines and application timelines</p>
-                    </div>
-                </div>
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1701576766277-c6160505581d?w=800"
+                alt="Students studying"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="hero-decoration hero-decoration-1"></div>
+        <div class="hero-decoration hero-decoration-2"></div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Why Choose JobAlert?</h2>
+            <p class="section-description">
+              Discover how our platform helps thousands of students find their
+              dream opportunities
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon bg-blue">
+                <i class="fas fa-bell"></i>
+              </div>
+              <h3 class="feature-title">Real-time Alerts</h3>
+              <p class="feature-description">
+                Get instant notifications when new opportunities match your
+                profile
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon bg-green">
+                <i class="fas fa-filter"></i>
+              </div>
+              <h3 class="feature-title">Smart Filtering</h3>
+              <p class="feature-description">
+                Filter jobs by skills, location, type, and more to find perfect
+                matches
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon bg-purple">
+                <i class="fas fa-bookmark"></i>
+              </div>
+              <h3 class="feature-title">Save Opportunities</h3>
+              <p class="feature-description">
+                Bookmark interesting jobs and internships for later review
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon bg-orange">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="feature-title">Career Growth</h3>
+              <p class="feature-description">
+                Track your applications and improve your career prospects
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon bg-pink">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3 class="feature-title">Email Updates</h3>
+              <p class="feature-description">
+                Receive daily or weekly email digests of new opportunities
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon bg-indigo">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="feature-title">Never Miss Out</h3>
+              <p class="feature-description">
+                Stay updated with deadlines and application timelines
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- Jobs Page -->
     <div id="jobsPage" class="page">
-        <!-- Search Header -->
-        <div class="search-header">
-            <div class="container">
-                <div class="search-header-content">
-                    <div class="search-bar-large">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search jobs, internships, companies...">
-                    </div>
-                    <button class="btn btn-primary" onclick="toggleFilters()">
-                        <i class="fas fa-filter"></i>
-                        Filters
-                        <span class="filter-count" id="filterCount"></span>
-                    </button>
-                </div>
-
-                <!-- Active Filters -->
-                <div class="active-filters" id="activeFilters"></div>
-            </div>
-        </div>
-
+      <!-- Search Header -->
+      <div class="search-header">
         <div class="container">
-            <div class="jobs-layout">
-                <!-- Filters Sidebar -->
-                <aside class="filters-sidebar" id="filtersSidebar">
-                    <div class="filters-panel">
-                        <h3>Filters</h3>
-                        
-                        <div class="filter-group">
-                            <h4>Type</h4>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Internship">
-                                <span>Internship</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Full-time">
-                                <span>Full-time</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Part-time">
-                                <span>Part-time</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Contract">
-                                <span>Contract</span>
-                            </label>
-                        </div>
-
-                        <div class="filter-group">
-                            <h4>Location</h4>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Remote">
-                                <span>Remote</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="New York">
-                                <span>New York</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="San Francisco">
-                                <span>San Francisco</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Austin">
-                                <span>Austin</span>
-                            </label>
-                        </div>
-
-                        <div class="filter-group">
-                            <h4>Skills</h4>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="React">
-                                <span>React</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Python">
-                                <span>Python</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="JavaScript">
-                                <span>JavaScript</span>
-                            </label>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="filter-checkbox" data-filter="Node.js">
-                                <span>Node.js</span>
-                            </label>
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- Job Listings -->
-                <div class="jobs-content">
-                    <div class="jobs-header">
-                        <h2>6 Opportunities Found</h2>
-                        <p>Showing the latest internships and jobs for you</p>
-                    </div>
-
-                    <div class="jobs-grid" id="jobsGrid">
-                        <!-- Job cards will be inserted here by JavaScript -->
-                    </div>
-
-                    <div class="load-more">
-                        <button class="btn btn-outline">Load More</button>
-                    </div>
-                </div>
+          <div class="search-header-content">
+            <div class="search-bar-large">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                placeholder="Search jobs, internships, companies..."
+              />
             </div>
+            <button class="btn btn-primary" onclick="toggleFilters()">
+              <i class="fas fa-filter"></i>
+              Filters
+              <span class="filter-count" id="filterCount"></span>
+            </button>
+          </div>
+
+          <!-- Active Filters -->
+          <div class="active-filters" id="activeFilters"></div>
         </div>
+      </div>
+
+      <div class="container">
+        <div class="jobs-layout">
+          <!-- Filters Sidebar -->
+          <aside class="filters-sidebar" id="filtersSidebar">
+            <div class="filters-panel">
+              <h3>Filters</h3>
+
+              <div class="filter-group">
+                <h4>Type</h4>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Internship"
+                  />
+                  <span>Internship</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Full-time"
+                  />
+                  <span>Full-time</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Part-time"
+                  />
+                  <span>Part-time</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Contract"
+                  />
+                  <span>Contract</span>
+                </label>
+              </div>
+
+              <div class="filter-group">
+                <h4>Location</h4>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Remote"
+                  />
+                  <span>Remote</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="New York"
+                  />
+                  <span>New York</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="San Francisco"
+                  />
+                  <span>San Francisco</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Austin"
+                  />
+                  <span>Austin</span>
+                </label>
+              </div>
+
+              <div class="filter-group">
+                <h4>Skills</h4>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="React"
+                  />
+                  <span>React</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Python"
+                  />
+                  <span>Python</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="JavaScript"
+                  />
+                  <span>JavaScript</span>
+                </label>
+                <label class="checkbox-label">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    data-filter="Node.js"
+                  />
+                  <span>Node.js</span>
+                </label>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Job Listings -->
+          <div class="jobs-content">
+            <div class="jobs-header">
+              <h2>6 Opportunities Found</h2>
+              <p>Showing the latest internships and jobs for you</p>
+            </div>
+
+            <div class="jobs-grid" id="jobsGrid">
+              <!-- Job cards will be inserted here by JavaScript -->
+            </div>
+
+            <div class="load-more">
+              <button class="btn btn-outline">Load More</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Dashboard Page -->
     <div id="dashboardPage" class="page">
-        <div class="container dashboard-container">
-            <!-- Profile Header -->
-            <div class="profile-header">
-                <div class="profile-avatar">JS</div>
-                <div class="profile-info">
-                    <h1>John Smith</h1>
-                    <p>Computer Science Student</p>
-                    <div class="profile-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Node.js</span>
-                    </div>
-                </div>
-                <button class="btn btn-outline">Edit Profile</button>
+      <div class="container dashboard-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-avatar">JS</div>
+          <div class="profile-info">
+            <h1>John Smith</h1>
+            <p>Computer Science Student</p>
+            <div class="profile-tags">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
             </div>
-
-            <!-- Stats Grid -->
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-card-icon bg-blue">
-                        <i class="fas fa-bookmark"></i>
-                    </div>
-                    <div class="stat-card-value">12</div>
-                    <div class="stat-card-label">Saved Jobs</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-icon bg-green">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="stat-card-value">8</div>
-                    <div class="stat-card-label">Applications</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-icon bg-purple">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <div class="stat-card-value">24</div>
-                    <div class="stat-card-label">New Alerts</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-card-icon bg-orange">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="stat-card-value">156</div>
-                    <div class="stat-card-label">Profile Views</div>
-                </div>
-            </div>
-
-            <!-- Dashboard Content -->
-            <div class="dashboard-grid">
-                <!-- Saved Jobs -->
-                <div class="dashboard-card">
-                    <div class="dashboard-card-header">
-                        <h2>Saved Jobs</h2>
-                        <a href="#" class="link-primary">View All</a>
-                    </div>
-                    <div class="saved-jobs">
-                        <div class="saved-job-item">
-                            <h3>Frontend Developer Intern</h3>
-                            <p>Tech Startup Inc.</p>
-                            <div class="saved-job-meta">
-                                <span><i class="fas fa-map-marker-alt"></i> Remote</span>
-                                <span><i class="fas fa-calendar"></i> Jan 30, 2026</span>
-                            </div>
-                            <button class="btn btn-primary btn-small">Apply Now</button>
-                        </div>
-                        <div class="saved-job-item">
-                            <h3>UI/UX Design Intern</h3>
-                            <p>Creative Agency</p>
-                            <div class="saved-job-meta">
-                                <span><i class="fas fa-map-marker-alt"></i> San Francisco, CA</span>
-                                <span><i class="fas fa-calendar"></i> Feb 5, 2026</span>
-                            </div>
-                            <button class="btn btn-primary btn-small">Apply Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Applications -->
-                <div class="dashboard-card">
-                    <div class="dashboard-card-header">
-                        <h2>Recent Applications</h2>
-                        <a href="#" class="link-primary">View All</a>
-                    </div>
-                    <div class="applications-list">
-                        <div class="application-item">
-                            <h3>Backend Developer</h3>
-                            <p>Cloud Services Co.</p>
-                            <div class="application-meta">
-                                <span>Applied: Jan 20, 2026</span>
-                                <span class="badge badge-yellow">Under Review</span>
-                            </div>
-                        </div>
-                        <div class="application-item">
-                            <h3>Data Science Intern</h3>
-                            <p>Analytics Corp</p>
-                            <div class="application-meta">
-                                <span>Applied: Jan 18, 2026</span>
-                                <span class="badge badge-green">Interview Scheduled</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Notifications -->
-                <div class="dashboard-card full-width">
-                    <div class="dashboard-card-header">
-                        <h2>Recent Notifications</h2>
-                    </div>
-                    <div class="notifications-list">
-                        <div class="notification-item bg-blue-light">
-                            <i class="fas fa-bell notification-icon text-blue"></i>
-                            <div class="notification-content">
-                                <p class="notification-title">New job matches your profile</p>
-                                <p class="notification-text">5 new frontend developer positions available</p>
-                                <p class="notification-time">2 hours ago</p>
-                            </div>
-                        </div>
-                        <div class="notification-item bg-green-light">
-                            <i class="fas fa-award notification-icon text-green"></i>
-                            <div class="notification-content">
-                                <p class="notification-title">Application status updated</p>
-                                <p class="notification-text">Your application for Data Science Intern is under review</p>
-                                <p class="notification-time">1 day ago</p>
-                            </div>
-                        </div>
-                        <div class="notification-item bg-purple-light">
-                            <i class="fas fa-envelope notification-icon text-purple"></i>
-                            <div class="notification-content">
-                                <p class="notification-title">Weekly digest ready</p>
-                                <p class="notification-text">24 new opportunities added this week</p>
-                                <p class="notification-time">3 days ago</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <button class="btn btn-outline">Edit Profile</button>
         </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-icon bg-blue">
+              <i class="fas fa-bookmark"></i>
+            </div>
+            <div class="stat-card-value">12</div>
+            <div class="stat-card-label">Saved Jobs</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon bg-green">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="stat-card-value">8</div>
+            <div class="stat-card-label">Applications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon bg-purple">
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="stat-card-value">24</div>
+            <div class="stat-card-label">New Alerts</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-icon bg-orange">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-card-value">156</div>
+            <div class="stat-card-label">Profile Views</div>
+          </div>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-grid">
+          <!-- Saved Jobs -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h2>Saved Jobs</h2>
+              <a href="#" class="link-primary">View All</a>
+            </div>
+            <div class="saved-jobs">
+              <div class="saved-job-item">
+                <h3>Frontend Developer Intern</h3>
+                <p>Tech Startup Inc.</p>
+                <div class="saved-job-meta">
+                  <span><i class="fas fa-map-marker-alt"></i> Remote</span>
+                  <span><i class="fas fa-calendar"></i> Jan 30, 2026</span>
+                </div>
+                <button class="btn btn-primary btn-small">Apply Now</button>
+              </div>
+              <div class="saved-job-item">
+                <h3>UI/UX Design Intern</h3>
+                <p>Creative Agency</p>
+                <div class="saved-job-meta">
+                  <span
+                    ><i class="fas fa-map-marker-alt"></i> San Francisco,
+                    CA</span
+                  >
+                  <span><i class="fas fa-calendar"></i> Feb 5, 2026</span>
+                </div>
+                <button class="btn btn-primary btn-small">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Applications -->
+          <div class="dashboard-card">
+            <div class="dashboard-card-header">
+              <h2>Recent Applications</h2>
+              <a href="#" class="link-primary">View All</a>
+            </div>
+            <div class="applications-list">
+              <div class="application-item">
+                <h3>Backend Developer</h3>
+                <p>Cloud Services Co.</p>
+                <div class="application-meta">
+                  <span>Applied: Jan 20, 2026</span>
+                  <span class="badge badge-yellow">Under Review</span>
+                </div>
+              </div>
+              <div class="application-item">
+                <h3>Data Science Intern</h3>
+                <p>Analytics Corp</p>
+                <div class="application-meta">
+                  <span>Applied: Jan 18, 2026</span>
+                  <span class="badge badge-green">Interview Scheduled</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="dashboard-card full-width">
+            <div class="dashboard-card-header">
+              <h2>Recent Notifications</h2>
+            </div>
+            <div class="notifications-list">
+              <div class="notification-item bg-blue-light">
+                <i class="fas fa-bell notification-icon text-blue"></i>
+                <div class="notification-content">
+                  <p class="notification-title">New job matches your profile</p>
+                  <p class="notification-text">
+                    5 new frontend developer positions available
+                  </p>
+                  <p class="notification-time">2 hours ago</p>
+                </div>
+              </div>
+              <div class="notification-item bg-green-light">
+                <i class="fas fa-award notification-icon text-green"></i>
+                <div class="notification-content">
+                  <p class="notification-title">Application status updated</p>
+                  <p class="notification-text">
+                    Your application for Data Science Intern is under review
+                  </p>
+                  <p class="notification-time">1 day ago</p>
+                </div>
+              </div>
+              <div class="notification-item bg-purple-light">
+                <i class="fas fa-envelope notification-icon text-purple"></i>
+                <div class="notification-content">
+                  <p class="notification-title">Weekly digest ready</p>
+                  <p class="notification-text">
+                    24 new opportunities added this week
+                  </p>
+                  <p class="notification-time">3 days ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Login Page -->
     <div id="loginPage" class="page">
-        <div class="login-container">
-            <div class="login-image">
-                <img src="https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?w=800" alt="Team collaboration">
-            </div>
-            <div class="login-form-container">
-                <div class="login-header">
-                    <h2 id="loginTitle">Welcome Back!</h2>
-                    <p id="loginSubtitle">Sign in to access your job alerts</p>
-                </div>
-
-                <form class="login-form" id="loginForm">
-                    <div class="form-group" id="nameGroup" style="display: none;">
-                        <label>Full Name</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-user"></i>
-                            <input type="text" placeholder="John Smith">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="you@example.com">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Password</label>
-                        <div class="input-with-icon">
-                            <i class="fas fa-lock"></i>
-                            <input type="password" id="passwordInput" placeholder="••••••••">
-                            <i class="fas fa-eye password-toggle" onclick="togglePassword()"></i>
-                        </div>
-                    </div>
-
-                    <div class="form-group" id="skillsGroup" style="display: none;">
-                        <label>Skills & Interests</label>
-                        <input type="text" placeholder="e.g., React, Python, UI Design">
-                    </div>
-
-                    <div class="form-options" id="rememberMe">
-                        <label class="checkbox-label">
-                            <input type="checkbox">
-                            <span>Remember me</span>
-                        </label>
-                        <a href="#" class="link-primary">Forgot password?</a>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-large" onclick="event.preventDefault(); showPage('dashboard');">
-                        <span id="submitBtnText">Sign In</span>
-                    </button>
-                </form>
-
-                <div class="social-login">
-                    <div class="divider">
-                        <span>Or continue with</span>
-                    </div>
-                    <div class="social-buttons">
-                        <button class="btn btn-outline">
-                            <i class="fab fa-google"></i> Google
-                        </button>
-                        <button class="btn btn-outline">
-                            <i class="fab fa-github"></i> GitHub
-                        </button>
-                    </div>
-                </div>
-
-                <p class="form-footer">
-                    <span id="toggleText">Don't have an account?</span>
-                    <a href="#" class="link-primary" onclick="toggleLoginSignup(); return false;" id="toggleLink">Sign up</a>
-                </p>
-            </div>
+      <div class="login-container">
+        <div class="login-image">
+          <img
+            src="https://images.unsplash.com/photo-1758873268631-fa944fc5cad2?w=800"
+            alt="Team collaboration"
+          />
         </div>
+        <div class="login-form-container">
+          <div class="login-header">
+            <h2 id="loginTitle">Welcome Back!</h2>
+            <p id="loginSubtitle">Sign in to access your job alerts</p>
+          </div>
+
+          <form class="login-form" id="loginForm">
+            <div class="form-group" id="nameGroup" style="display: none">
+              <label>Full Name</label>
+              <div class="input-with-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="John Smith" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <div class="input-with-icon">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <div class="input-with-icon">
+                <i class="fas fa-lock"></i>
+                <input
+                  type="password"
+                  id="passwordInput"
+                  placeholder="••••••••"
+                />
+                <i
+                  class="fas fa-eye password-toggle"
+                  onclick="togglePassword()"
+                ></i>
+              </div>
+            </div>
+
+            <div class="form-group" id="skillsGroup" style="display: none">
+              <label>Skills & Interests</label>
+              <input type="text" placeholder="e.g., React, Python, UI Design" />
+            </div>
+
+            <div class="form-options" id="rememberMe">
+              <label class="checkbox-label">
+                <input type="checkbox" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="link-primary">Forgot password?</a>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-large"
+              onclick="event.preventDefault(); showPage('dashboard');"
+            >
+              <span id="submitBtnText">Sign In</span>
+            </button>
+          </form>
+
+          <div class="social-login">
+            <div class="divider">
+              <span>Or continue with</span>
+            </div>
+            <div class="social-buttons">
+              <button class="btn btn-outline">
+                <i class="fab fa-google"></i> Google
+              </button>
+              <button class="btn btn-outline">
+                <i class="fab fa-github"></i> GitHub
+              </button>
+            </div>
+          </div>
+
+          <p class="form-footer">
+            <span id="toggleText">Don't have an account?</span>
+            <a
+              href="#"
+              class="link-primary"
+              onclick="toggleLoginSignup(); return false;"
+              id="toggleLink"
+              >Sign up</a
+            >
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <div class="footer-logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <span class="logo-text">JobAlert</span>
-                    </div>
-                    <p>Helping students discover their dream internships and jobs with real-time alerts and personalized recommendations.</p>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Browse Jobs</a></li>
-                        <li><a href="#">Internships</a></li>
-                        <li><a href="#">Companies</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>For Students</h3>
-                    <ul>
-                        <li><a href="#">Create Profile</a></li>
-                        <li><a href="#">Career Resources</a></li>
-                        <li><a href="#">Resume Tips</a></li>
-                        <li><a href="#">Interview Guide</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul class="contact-list">
-                        <li><i class="fas fa-envelope"></i> support@jobalert.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Career St, Tech City</li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              <span class="logo-text">JobAlert</span>
             </div>
+            <p>
+              Helping students discover their dream internships and jobs with
+              real-time alerts and personalized recommendations.
+            </p>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2026 JobAlert. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
-                </div>
-            </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Browse Jobs</a></li>
+              <li><a href="#">Internships</a></li>
+              <li><a href="#">Companies</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>For Students</h3>
+            <ul>
+              <li><a href="#">Create Profile</a></li>
+              <li><a href="#">Career Resources</a></li>
+              <li><a href="#">Resume Tips</a></li>
+              <li><a href="#">Interview Guide</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="contact-list">
+              <li><i class="fas fa-envelope"></i> support@jobalert.com</li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Career St, Tech City
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 JobAlert. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="scripts/app.js"></script>
-
-</body>
+  </body>
 </html>
