@@ -90,7 +90,7 @@ npm or yarn
 Git
 MySQL / MongoDB (depending on your database)
 1. Clone the Repository
-git clone https://github.com/your-username/job-platform.git
+git clone https://github.com/Zithvi/blog-platform.git
 cd job-platform
 2. Install Dependencies
 Backend
