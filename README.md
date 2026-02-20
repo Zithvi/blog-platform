@@ -1,4 +1,4 @@
 # blog-platform
-https://github.com/Zithvi/blog-platform/blob/main/index.html
+file:///C:/Users/USER/Desktop/123/blog-platform/index.html#
 
 Advanced Git &amp; DevOps Assignment
