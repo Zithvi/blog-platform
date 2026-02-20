@@ -5,18 +5,36 @@ on:
   push:
     branches: [main, develop]
 
+permissions:
+  contents: write
+
 jobs:
   format-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Run Prettier check
+      - name: Format with Prettier
         run: |
-          npx --yes prettier@3.3.3 --check "**/*.{html,css,js,json,md,yml,yaml}" --ignore-path .gitignore
+          npx --yes prettier@3.3.3 --write "**/*.{html,css,js,json,md,yml,yaml}" --ignore-path .gitignore
+
+      - name: Commit formatted files (push only on direct pushes, not PRs)
+        if: github.event_name == 'push'
+        run: |
+          if git status --porcelain | grep .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: auto-format with Prettier"
+            git push
+          else
+            echo "No formatting changes to commit."
+          fi
