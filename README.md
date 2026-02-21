@@ -24,7 +24,7 @@ Responsive Design – Fully optimized for mobile, tablet, and desktop devices.
 
 # Live Deployment
 
-Live URL: https://github.com/Zithvi/blog-platform.git
+Live URL: https://fastidious-crisp-130ac2.netlify.app/
 
 # Technologies Used
 
