@@ -2,12 +2,16 @@
 
 # Group Informations
 
-student1:H.V.S.Gimasha-ITBIN-2313-0035
-Role:Devops Engineer
-Student2:D.R.A.I.Kumari Dassanayaka-ITBIN-2313-0035
-Role:Frontend Developer
-Student3:P.D.S.Hirunika kavindi-ITBIN-2313-0049
-Role:Backend Developer
+student1:  H.V.S.Gimasha ITBIN-2313-0035
+Role:  Devops Engineer
+
+
+Student2:  D.R.A.I.Kumari Dassanayaka ITBIN-2313-0035
+Role:  Frontend Developer
+
+
+Student3:  P.D.S.Hirunika kavindi ITBIN-2313-0049
+Role:   Backend Developer
 
 # Description
 
