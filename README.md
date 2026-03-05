@@ -36,9 +36,7 @@ CSS3 – Styling and responsive design
 JavaScript (ES6) – Client-side interactivity
 Bootstrap – Responsive UI components
 
-
 DevOps & Tools: Github
-
 
 Backend:
 Node.js – Server-side runtime environment
