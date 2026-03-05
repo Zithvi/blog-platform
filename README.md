@@ -30,12 +30,17 @@ Live URL: https://fastidious-crisp-130ac2.netlify.app/
 
 # Technologies Used
 
-Frontend
+Frontend:
 HTML5 – Structure of the web pages
 CSS3 – Styling and responsive design
 JavaScript (ES6) – Client-side interactivity
 Bootstrap – Responsive UI components
-Backend
+
+
+DevOps & Tools: Github
+
+
+Backend:
 Node.js – Server-side runtime environment
 Express.js – Backend framework for handling routes and APIs
 
